@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: calc(100vw - 256px);
+
+    background-color: #ffffff;
+}
+
+#daysOfTheWeek {
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+    width: 100%;
+
+    justify-content: space-evenly;
+    overflow-x: scroll;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+
+    width: 14%;
+    min-width: 170px;
+
+    border-right: 2px solid rgb(242, 242, 242);
+}
