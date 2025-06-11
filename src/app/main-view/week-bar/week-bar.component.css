@@ -5,10 +5,7 @@
     height: 50px;
     width: 100%;
 
-    justify-content: center;
-    align-items: center;
-
-    background-color:  rgb(242, 242, 242);
+    background-color: #c1ced7;
 }
 
 i, .current-month, .dummy-element {
