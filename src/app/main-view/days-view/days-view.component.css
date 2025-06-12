@@ -8,6 +8,7 @@
     justify-content: space-between;
 
     overflow-x: scroll;
+    scrollbar-width: thin;
 }
 
 .day {
@@ -15,21 +16,44 @@
     flex-direction: column;
 
     height:100%;
-    width: 14%;
+    flex: 1;
     min-width: 170px;
-
-        border-right: 2px solid #c1ced7;
-
 }
 
 .dayHeader {
+    position: relative;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 
     height: 130px;
     width: 100%;
-    
+}
+
+.currentDay .dayHeaderNumber {
+    width: 40px;
+    height: 40px;
     background-color: #dde7ee;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayHeaderDay {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-100%) translateY(-5px);
+
+    font-size: 1rem;
+}
+
+.dayHeaderNumber {
+    font-size: 1.5rem;
 }
 
 .dayContent {
@@ -39,8 +63,18 @@
     height: calc(100% - 130px);
     width: 100%;
 
+    border-right: 2px solid #dde7ee;
+
+    overflow-y: scroll;
 }
 
 .lastDay {
     border: none!important;
+}
+
+.hour {
+    display: flex;
+
+    height: 120px;
+    width: 100%;
 }

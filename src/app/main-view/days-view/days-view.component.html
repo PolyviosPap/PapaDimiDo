@@ -1,56 +1,65 @@
-<div id="monday" class="day">
-    <div id="mondayHeader" class="dayHeader">
-        Δευτέρα 22
+<div class="day">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Δευτέρα</div>
+        <div class="dayHeaderNumber">22</div>
     </div>
-    <div id="mondayContent" class="dayContent">
+    <div class="dayContent">
 
     </div>
 </div>
-<div id="tuesday" class="day">
-    <div id="tuesdayHeader" class="dayHeader">
-        Τρίτη 23
+<div class="day">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Τρίτη</div>
+        <div class="dayHeaderNumber">23</div>
     </div>
-    <div id="tuesdayContent" class="dayContent">
+    <div class="dayContent">
 
     </div>
 </div>
-<div id="wednsday" class="day">
-    <div id="wednsdayHeader" class="dayHeader">
-        Τετάρτη 24
+<div class="day">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Τετάρτη</div>
+        <div class="dayHeaderNumber">24</div>
     </div>
-    <div id="wednsdayContent" class="dayContent">
+    <div class="dayContent">
 
     </div>
 </div>
-<div id="thursday" class="day">
-    <div id="thursdayHeader" class="dayHeader">
-        Πέμπτη 25
+<div class="day">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Πέμπτη</div>
+        <div class="dayHeaderNumber">25</div>
     </div>
-    <div id="thursdayContent" class="dayContent">
+    <div class="dayContent">
 
     </div>
 </div>
-<div id="friday" class="day">
-    <div id="fridayHeader" class="dayHeader">
-        Παρασκευή 26
+<div class="day currentDay">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Παρασκευή</div>
+        <div class="dayHeaderNumber">26</div>
     </div>
-    <div id="fridayContent" class="dayContent">
+    <div class="dayContent">
 
     </div>
 </div>
-<div id="saturday" class="day">
-    <div id="saturdayHeader" class="dayHeader">
-        Σάββατο 27
+<div class="day">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Σάββατο</div>
+        <div class="dayHeaderNumber">27</div>
     </div>
-    <div id="saturdayContent" class="dayContent">
+    <div class="dayContent">
 
     </div>
 </div>
-<div id="sunday" class="day lastDay">
-    <div id="sundayHeader" class="dayHeader">
-        Κυριακή 28
+<div class="day">
+    <div class="dayHeader">
+        <div class="dayHeaderDay">Κυριακή</div>
+        <div class="dayHeaderNumber">28</div>
     </div>
-    <div id="sundayContent" class="dayContent ">
-
+    <div class="dayContent lastDay">
+        <div class="hour" *ngFor="let hour of dayTimeHours">
+            {{ hour }}:00
+        </div>
     </div>
 </div>
