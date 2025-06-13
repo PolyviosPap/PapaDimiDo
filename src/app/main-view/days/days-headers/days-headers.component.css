@@ -31,5 +31,19 @@
 }
 
 .dayHeaderDate {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
     font-size: 1.5rem;
+}
+
+.circle-bg {
+  width: 35px;
+  height: 35px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="100" cy="100" r="100" fill="%237390a5"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
 }
