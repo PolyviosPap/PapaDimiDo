@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { WeekBarComponent } from './week-bar/week-bar.component';
-import { DaysViewComponent } from './days-view/days-view.component';
+import { DaysComponent } from './days/days.component';
 
 @Component({
   selector: 'app-main-view',
   imports: [
     WeekBarComponent,
-    DaysViewComponent
+    DaysComponent
   ],
   templateUrl: './main-view.component.html',
   styleUrl: './main-view.component.css'

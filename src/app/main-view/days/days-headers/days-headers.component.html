@@ -1,0 +1,14 @@
+<div class="hourColumnDummy"></div>
+
+<div
+    class="dayHeader" 
+    *ngFor="let date of weekDates; let i = index" 
+    [class.currentDay]="isToday(date)"
+>
+
+    <svg *ngIf="isToday(date)" class="circle-bg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="#007bff" />
+    </svg>
+    <div class="dayHeaderDay">{{ weekDays[i] }}</div>
+    <div class="dayHeaderDate">{{ date.getDate() }}</div>
+</div>
