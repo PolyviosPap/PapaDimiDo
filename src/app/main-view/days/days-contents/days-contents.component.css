@@ -1,0 +1,50 @@
+:host {
+    display: flex;
+    flex-direction: row;
+
+    /* parent is a column */
+    /*width: calc(100vw - 250px);*/ /* 100% of parent */
+    /*height: calc(100vh - 50px - 130px);*/ /* its brother takes 130px fixed height */
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.hoursColumn {
+    display: flex;
+    flex-direction: column;
+
+    /* parent is a row */
+    width: 40px;
+    min-width: 40px; /* fixed 40px width */
+    /*height: 100%;*/
+}
+
+.hour {
+    display: flex;
+    flex-direction: column;
+
+    /* parent is a column */
+    /* width: 100%; */
+    height: 120px;
+    min-height: 120px; /* fixed 120px height */
+}
+
+.dayContent {
+    display: flex;
+    flex-direction: column;
+
+    /* parent is a row */
+    width: 170px;
+    flex: 1; /* take the remaining horizontal space */
+    min-width: 170px; /* but don't shrink below 170px */
+}
+
+.dayContent > .hour {
+    border-right: 2px solid #c1ced7;
+}
+
+.lastDay {
+    border: none;
+}

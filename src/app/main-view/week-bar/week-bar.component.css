@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
 
-    height: 50px;
-    width: 100%;
+    /* parent is a column */
+    width: calc(100vw - 250px); /* 100% of parent */
+    height: 50px;    
 
     background-color: #f7f7f7;
 }
