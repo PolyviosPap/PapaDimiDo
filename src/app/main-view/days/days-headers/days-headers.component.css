@@ -3,8 +3,9 @@
     flex-direction: row;
     
     /* parent is a column */
-    /*width: calc(100vw - 250px);*/ /* 100% of parent */
+    min-width: 1230px;
     height: 130px;
+    min-height: 130px;
 }
 
 .hoursColumnDummy {

@@ -3,11 +3,11 @@
     flex-direction: row;
 
     /* parent is a column */
+    min-width: 1241px;
+    height: calc(100vh - 50px - 130px); /* its brother takes 130px fixed height */
     /*width: calc(100vw - 250px);*/ /* 100% of parent */
-    /*height: calc(100vh - 50px - 130px);*/ /* its brother takes 130px fixed height */
 
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: thin;
 }
 
