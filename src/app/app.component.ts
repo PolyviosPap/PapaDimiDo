@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { LeftPaneComponent } from './left-pane/left-pane.component';
-import { MainViewComponent } from './main-view/main-view.component';
+import { MainWindowComponent } from './main-window/main-window.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     LeftPaneComponent, 
-    MainViewComponent
+    MainWindowComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

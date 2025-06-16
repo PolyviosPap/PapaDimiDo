@@ -3,15 +3,15 @@ import { DaysHeadersComponent } from './days-headers/days-headers.component';
 import { DaysContentsComponent } from './days-contents/days-contents.component';
 
 @Component({
-  selector: 'app-days',
+  selector: 'app-days-window',
   imports: [
     DaysHeadersComponent,
     DaysContentsComponent
   ],
-  templateUrl: './days.component.html',
-  styleUrl: './days.component.css'
+  templateUrl: './days-window.component.html',
+  styleUrl: './days-window.component.css'
 })
 
-export class DaysComponent {
+export class DaysWindowComponent {
 
 }

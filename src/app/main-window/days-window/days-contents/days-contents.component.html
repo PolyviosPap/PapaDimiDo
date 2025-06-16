@@ -1,0 +1,14 @@
+<div class="hoursColumn">
+    <div class="hourHeader" *ngFor="let hour of hours">
+        {{ hour }}:00
+    </div>
+</div>
+
+<div class="dayContent" *ngFor="let day of weekDays">
+    <div 
+        class="hourContent"
+        *ngFor="let hour of hours; let i = index"
+        [class.firstHourContent]="i == 0"
+    >
+    </div>
+</div>

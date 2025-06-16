@@ -21,7 +21,7 @@
     /*height: 100%;*/
 }
 
-.hour {
+.hourHeader {
     display: flex;
     flex-direction: column;
 
@@ -29,6 +29,18 @@
     /* width: 100%; */
     height: 120px;
     min-height: 120px; /* fixed 120px height */
+}
+
+.hourContent {
+    display: flex;
+    flex-direction: column;
+
+    /* parent is a column */
+    /* width: 100%; */
+    height: 121px;
+    min-height: 121px; /* fixed 121px height (+1 px for border) */
+
+    border-top: 1px solid #e0e6eb;
 }
 
 .dayContent {
@@ -39,10 +51,15 @@
     width: 170px;
     flex: 1; /* take the remaining horizontal space */
     min-width: 170px; /* but don't shrink below 170px */
+
+    border-right: 2px solid #c1ced7;
 }
 
-.dayContent > .hour {
-    border-right: 2px solid #c1ced7;
+.firstHourContent {
+    height: 120px;
+    min-height: 120px; /* fixed 121px height (+1 px for border) */
+
+    border: none;
 }
 
 .lastDay {
