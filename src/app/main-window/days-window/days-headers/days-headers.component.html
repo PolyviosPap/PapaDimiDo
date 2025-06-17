@@ -2,9 +2,15 @@
 
 <div
     class="dayHeader" 
-    *ngFor="let date of weekDates; let i = index" 
-    [class.currentDay]="isToday(date)"
+    *ngFor="let date of weekDates; let i = index"
+    (click)="selectDay(i)"
 >
     <div class="dayHeaderDay">{{ weekDays[i] }}</div>
-    <div class="dayHeaderDate" [class.circle-bg]="isToday(date)">{{ date.getDate() }}</div>
+    <div
+        class="dayHeaderDate" 
+        [class.currentDay]="isToday(date)"
+        [class.selectedDay]="selectedIndex === i"
+    >
+        {{ date.getDate() }}
+    </div>
 </div>

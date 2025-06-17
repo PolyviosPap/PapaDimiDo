@@ -7,5 +7,4 @@
     height: calc(100vh - 50px); /* its brother takes 50px fixed height */
 
     overflow-x: auto; /* horizontal scrollbar for day headers and contents */
-    scrollbar-width: thin;
 }

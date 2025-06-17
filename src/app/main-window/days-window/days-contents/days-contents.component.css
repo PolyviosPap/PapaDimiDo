@@ -3,15 +3,16 @@
     flex-direction: row;
 
     /* parent is a column */
-    min-width: 1241px;
+    min-width: 1240px; /* 40 px hours headers + 7*170 + 10px scrollbar */
     height: calc(100vh - 50px - 130px); /* its brother takes 130px fixed height */
     /*width: calc(100vw - 250px);*/ /* 100% of parent */
 
     overflow-y: auto;
-    scrollbar-width: thin;
+
+    padding-top: 8px;
 }
 
-.hoursColumn {
+.hoursHeadersColumn {
     display: flex;
     flex-direction: column;
 
@@ -27,20 +28,11 @@
 
     /* parent is a column */
     /* width: 100%; */
-    height: 120px;
-    min-height: 120px; /* fixed 120px height */
-}
-
-.hourContent {
-    display: flex;
-    flex-direction: column;
-
-    /* parent is a column */
-    /* width: 100%; */
     height: 121px;
-    min-height: 121px; /* fixed 121px height (+1 px for border) */
+    min-height: 121px; /* fixed 121px height (+1 px for the top border)*/
 
-    border-top: 1px solid #e0e6eb;
+    position: relative;
+    top: -8px;
 }
 
 .dayContent {
@@ -51,17 +43,26 @@
     width: 170px;
     flex: 1; /* take the remaining horizontal space */
     min-width: 170px; /* but don't shrink below 170px */
+}
 
-    border-right: 2px solid #c1ced7;
+.hourContent {
+    display: flex;
+    flex-direction: column;
+
+    /* parent is a column */
+    /* width: 100%; */
+    height: 120px;
+    min-height: 120px; /* fixed 120px height*/
+
+    border-top: 1px solid #e0e6eb;
+    border-left: 1px solid #c1ced7;
+    border-right: 1px solid #c1ced7;
 }
 
 .firstHourContent {
-    height: 120px;
-    min-height: 120px; /* fixed 121px height (+1 px for border) */
-
-    border: none;
+    border-left: none;
 }
 
-.lastDay {
-    border: none;
+.lastHourContent {
+    border-right: none;
 }

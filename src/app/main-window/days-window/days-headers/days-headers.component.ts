@@ -11,6 +11,13 @@ export class DaysHeadersComponent {
   weekDays = ['Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο', 'Κυριακή'];
   weekDates: Date[] = [];
 
+  selectedIndex: number | null = null;
+
+  selectDay(index: number): void {
+    this.selectedIndex = index;
+  }
+
+
   ngOnInit() {
     this.setWeek(new Date());
   }
