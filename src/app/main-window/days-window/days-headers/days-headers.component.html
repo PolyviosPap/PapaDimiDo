@@ -3,14 +3,16 @@
 <div
     class="dayHeader" 
     *ngFor="let date of weekDates; let i = index"
-    (click)="selectDay(i)"
 >
-    <div class="dayHeaderDay">{{ weekDays[i] }}</div>
-    <div
-        class="dayHeaderDate" 
-        [class.currentDay]="isToday(date)"
-        [class.selectedDay]="selectedIndex === i"
-    >
-        {{ date.getDate() }}
+    <div class="clickableDayHeader" (click)="selectDay(date)">
+        <div class="dayHeaderDay">{{ weekDays[i] }}</div>
+        <div
+            class="dayHeaderDate" 
+            [class.currentDay]="isToday(date)"
+            [class.selectedDay]="isSelected(date)"
+        >
+            {{ date.getDate() }}
+        </div>
     </div>
+    
 </div>

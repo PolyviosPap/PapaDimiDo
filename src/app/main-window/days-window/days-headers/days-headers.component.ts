@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {CalendarStateService} from '../../../calendar-state.service';
+
 @Component({
   selector: 'app-days-headers',
   imports: [CommonModule],
@@ -10,16 +12,20 @@ import { CommonModule } from '@angular/common';
 export class DaysHeadersComponent {
   weekDays = ['Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο', 'Κυριακή'];
   weekDates: Date[] = [];
+  selectedDate!: Date;  // ! -> definite assignment assertion for assuring typesript that the variable will get assigned before it's used.
 
-  selectedIndex: number | null = null;
-
-  selectDay(index: number): void {
-    this.selectedIndex = index;
-  }
-
+  // calendar-state service injection
+  constructor(private calendarState: CalendarStateService) {}
 
   ngOnInit() {
-    this.setWeek(new Date());
+    // get the selected date from the calendar-state service
+    this.selectedDate = this.calendarState.getSelectedDate();
+    // set the week 
+    this.setWeek(this.selectedDate);
+    // subscribe to the selectedDate 
+    this.calendarState.selectedDate$.subscribe(date => {
+      this.selectedDate = date;
+    });    
   }
 
   setWeek(startDate: Date) {
@@ -35,10 +41,17 @@ export class DaysHeadersComponent {
     });
   }
 
+  selectDay(date: Date): void {
+    this.selectedDate = date;
+    this.calendarState.setSelectedDate(date);
+  }
+
   isToday(date: Date): boolean {
     const today = new Date();
-    return date.getDate() === today.getDate() &&
-           date.getMonth() === today.getMonth() &&
-           date.getFullYear() === today.getFullYear();
+    return date.toDateString() === today.toDateString();
+  }
+
+  isSelected(date: Date): boolean {
+    return date.toDateString() === this.selectedDate.toDateString();
   }
 }

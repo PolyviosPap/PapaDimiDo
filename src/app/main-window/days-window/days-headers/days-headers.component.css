@@ -32,6 +32,19 @@
     align-items: center;
 }
 
+.clickableDayHeader {
+    display: flex;
+    flex-direction: column;
+
+    width: 130px;
+    height: 120px;
+
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
 .dayHeaderDay {
     font-size: 1rem;
     margin-bottom: 5px;
