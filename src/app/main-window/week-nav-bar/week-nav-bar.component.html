@@ -1,4 +1,4 @@
 <div class="dummy-element"></div>
-<i class="fas fa-angle-left"></i>
-<i class="fas fa-angle-right"></i>
-<div class="current-month">Μάιος - Ιουν '25</div>
+<i class="fas fa-angle-left" (click)="onArrowLeftClick()"></i>
+<i class="fas fa-angle-right" (click)="onArrowRightClick()"></i>
+<div class="current-month">{{selectedWeekLabel}}</div>
