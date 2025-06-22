@@ -3,7 +3,7 @@
     flex-direction: row;
 
     /* parent is a column */
-    width: calc(100vw - 250px); /* 100% of parent */
+    width: calc(100vw - 320px); /* 100% of parent */
     height: 50px;    
 
     background-color: #f7f7f7;

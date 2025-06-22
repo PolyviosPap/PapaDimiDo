@@ -12,7 +12,6 @@ import { CalendarStateService } from '../../../calendar-state.service';
 export class DaysHeadersComponent {
   weekDays = ['Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο', 'Κυριακή'];
   weekDates: Date[] = [];
-  //selectedDate!: Date;  // ! -> definite assignment assertion for assuring typesript that the variable will get assigned before it's used.
 
   // calendar-state service injection
   constructor(private calendarState: CalendarStateService) {}

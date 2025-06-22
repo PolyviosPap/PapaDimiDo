@@ -3,7 +3,7 @@
     flex-direction: column;
 
     /* parent is a column */
-    width: calc(100vw - 250px); /* 100% of parent */
+    width: calc(100vw - 320px); /* 100% of parent */
     height: calc(100vh - 50px); /* its brother takes 50px fixed height */
 
     overflow-x: auto; /* horizontal scrollbar for day headers and contents */

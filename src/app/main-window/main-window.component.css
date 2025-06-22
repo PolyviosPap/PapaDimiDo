@@ -1,8 +1,4 @@
 :host {
     display: flex;
     flex-direction: column;
-
-    /* parent is a row */
-    /*width: calc(100vw - 250px);*/ /* its brother takes 250px fixed width */
-    /*height: 100vh;*/
 }
