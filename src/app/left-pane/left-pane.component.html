@@ -1,3 +1,6 @@
 <mat-card class="datepickerCard">
-  <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+  <mat-calendar 
+    [(selected)]="selectedDate" 
+    (selectedChange)="calendarState.setSelectedDate($event)">
+  </mat-calendar>
 </mat-card>

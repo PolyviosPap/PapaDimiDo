@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -25,7 +25,7 @@ export class LeftPaneComponent {
   selectedDate!: Date;  // ! -> definite assignment assertion for assuring typesript that the variable will get assigned before it's used.
 
   // calendar-state service injection
-  constructor(private calendarState: CalendarStateService) {}
+  constructor(public calendarState: CalendarStateService) {}
 
   ngOnInit(): void {
     // get the selected week from the calendar-state service
@@ -34,6 +34,6 @@ export class LeftPaneComponent {
     // subscribe to the observable
     this.calendarState.selectedDate$.subscribe(date => {
       this.selectedDate = date;
-    })
+    });
   }
 }

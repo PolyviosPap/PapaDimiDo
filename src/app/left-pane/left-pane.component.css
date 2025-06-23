@@ -14,4 +14,10 @@
 
 .datepickerCard {
     width: 300px;
+    background-color: #f7f7f7;
+    box-shadow: none;
+}
+
+.mat-calendar-body-selected {
+    background-color: #7390a5;
 }
