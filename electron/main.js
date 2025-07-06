@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+require('./ipc');
+
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -9,7 +11,8 @@ function createWindow () {
     minHeight: 600,
     webPreferences: {
       contextIsolation: false,
-      nodeIntegration: true
+      nodeIntegration: true,
+      preload: path.join(__dirname, '../preload.js')
     }
   });
 
@@ -18,7 +21,7 @@ function createWindow () {
   const indexPath = path.join(__dirname, '../dist/papa-dimi-do/browser/index.html');
   win.loadFile(indexPath);
 
-  win.webContents.openDevTools(); // Optional
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);
